@@ -1,18 +1,24 @@
 {
-  "name": "new-grah-hit",
+  "name": "grafhit-www",
   "version": "1.0.0",
-  "description": "Graf'hit on steroids !",
+  "description": "a modern upcoming version of the grafhit.net website",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sd65/New-Graf-hit.git"
+    "url": "git+https://github.com/ermina/grafhit-www.git"
   },
   "author": "Emilie Confais, Clément Letoc & Sylvain Doignon",
+  "maintainers": [
+    {
+      "name": "Leo Magnien",
+      "email": "leo@grafhit.net",
+    }
+  ],
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sd65/New-Graf-hit/issues"
+    "url": "https://github.com/ermina/grafhit-www/issues"
   },
-  "homepage": "https://github.com/sd65/New-Graf-hit#readme",
+  "homepage": "https://github.com/ermina/grafhit-www/",
   "dependencies": {
     "body-parser": "^1.15.1",
     "chokidar": "^1.5.0",

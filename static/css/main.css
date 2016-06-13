@@ -2,7 +2,14 @@
   font-family: "Titre";
   font-style: normal;
   font-weight: normal;
-  src: url("/font/lerotica-regular.ttf") format("truetype");
+  src: url("/fonts/lerotica-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Contenu";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/FreeUniversal-Regular.ttf") format("truetype");
 }
 
 h1, h2, h5 {
@@ -10,31 +17,23 @@ h1, h2, h5 {
 }
 
 * {
-  font-family: Arial;
-}
-
-/*
-@font-face {
-  font-family: "Contenu";
-  font-style: normal;
-  font-weight: normal;
-  src: url("/font/FreeUniversal-Regular.ttf") format("truetype");
-}
-* {
   font-family: Contenu;
 }
-*/
+
 
 body {
   background: url("/img/bg.png") no-repeat, url("/img/bg2.png") repeat;
+  font-family: Contenu;
+  font-size: 20px;
 }
 
 #logo {
   display: block;
-  width: 100%;
-  margin: 0px auto 5px;
-  max-width: 325px;
-  padding-bottom: 4px;
+  width: 100px;
+  margin: 0px 5px 0px 0px;
+  max-width: 100px;
+  padding-bottom: 6px;
+  display: inline-block;
 }
 
 section#content {
