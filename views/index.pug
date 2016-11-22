@@ -5,17 +5,18 @@ block vars
 
 block content
   block contentAjax
-    h1 À ré-écouter
+    h1 à ré-écouter
     each highlight in highlighted
       .media-object.podcast
         .media-object-section
           .thumbnail(data-file=highlight.fileUrl, data-title=highlight.title)
-            img(src="/img/logo.png")
+            //img(src="/img/logo.png")
+            img.media-play(src="/img/media-play.svg")
         .media-object-section
           h5= highlight.title
           p !{highlight.description}
     if actus
-      h1 Actualités
+      h1 actualités
       each actu in actus
         .callout
           h5= actu.title

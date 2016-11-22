@@ -12,8 +12,12 @@
   src: url("/fonts/FreeUniversal-Regular.ttf") format("truetype");
 }
 
-h1, h2, h5 {
+h1, h2, h4, h5 {
   font-family: Titre;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 * {
@@ -22,22 +26,33 @@ h1, h2, h5 {
 
 
 body {
-  background: url("/img/bg.png") no-repeat, url("/img/bg2.png") repeat;
+  background: url("/img/bg_rev.png") no-repeat, url("/img/bg2.png") repeat;
   font-family: Contenu;
   font-size: 20px;
+}
+
+a {
+  border-bottom: 1px solid #DDD;
 }
 
 #logo {
   display: block;
   width: 100px;
-  margin: 0px 5px 0px 0px;
+  margin: 0rem 0.4rem 0rem 2rem;
   max-width: 100px;
-  padding-bottom: 6px;
+  vertical-align: -0.5rem;
   display: inline-block;
 }
 
+#intro {
+  background: rgba(250,250,250,0.7);
+  padding-top: 1rem;
+}
+#intro a:focus, #intro a:hover {
+  background-color: rgba(255,255,255,0);
+}
+
 section#content {
-  background: rgba(255, 255, 255, 0.7);
   min-height: 100%; 
   padding: 1em 2em 4em 2em;
 }
@@ -47,7 +62,7 @@ section#content h1, h2 {
 }
 
 section#content h1 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 section#content .podcast h5 {
@@ -55,7 +70,17 @@ section#content .podcast h5 {
 }
 
 .media-object {
-  border: 1px solid rgba(10, 10, 10, 0.25);
+  border-bottom: 1px solid rgba(10, 10, 10, 0.25);
+  margin-top: 2rem;
+}
+
+
+.thumbnail {
+  box-shadow: none;
+  border: 1px solid #ddd;
+  border-radius: 10%;
+  xpadding: 2px 0px 2px 5px;
+  padding-left: 2px;
 }
 
 .media-object .thumbnail {
@@ -64,15 +89,15 @@ section#content .podcast h5 {
 }
 
 .media-object img {
-  height: 80px;
+  height: 40px;
 }
 
 .media-object .thumbnail:hover {
-  background: #ddd;
+  box-shadow: 
 }
 
 aside p, aside #nowPlaying {
-  text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(255, 255, 255, .5) -1px 1px, rgba(255, 255, 255, .5) -1px -1px, rgba(255, 255, 255, .5) 1px -1px;
+  xtext-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(255, 255, 255, .5) -1px 1px, rgba(255, 255, 255, .5) -1px -1px, rgba(255, 255, 255, .5) 1px -1px;
 }
 
 aside #nowPlaying {
@@ -84,13 +109,42 @@ aside #nowPlaying p {
  font-size: 1.2em;
 }
 
-aside a.button {
+aside a.button, a.button:active {
   margin-bottom: 3px;
+  color: #000;
+}
+
+aside a.button:hover, aside a.button:focus {
+  color: #000;
+}
+
+aside button {
+  padding-bottom: 0.45rem;
+}
+
+a.button:focus, a.button:hover {
+
+    background-color: rgba(205,205,205,1);
+}
+a:focus, a:hover{
+  color: #000;
+  background-color: rgba(205,205,205,1);
+}
+
+a {
+  color: #000;
+border-bottom: dotted 1px #000;
+}
+
+a:focus, a:hover{
+  color: #000;
+  background-color: rgba(205,205,205,1);
 }
 
 aside #search {
  margin-bottom: .5em;
  background-color: #999;
+ color: #000;
 }
 
 aside #nowPlaying ul {
@@ -123,7 +177,16 @@ aside ul#searchResults {
 
 aside .title-bar {
   margin-bottom: 1em;
+  background-color: rgba(255,255,255,0.7);
+  color: #333;
+  text-align: center;
+  border: solid 1px;
 }
+
+#intro a {
+  border: none;
+}
+
 
 option, select {
   text-align: center;
@@ -271,7 +334,7 @@ progress::-webkit-progress-value {
   cursor: pointer;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px) { /* adapt player for small screens */
   #player #playPause {
     width: 25px;
   }
@@ -295,4 +358,22 @@ progress::-webkit-progress-value {
   #player #playerButton {
     height: 30px;
   }
+
+  section#content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+@media screen and (min-width: 500px) { /* ------------------------------------------------desktop */
+  aside {
+    margin: 2em;
+    xborder: 1px solid #F0F;
+    width:17.5em;
+  }
+
+  section#content h1 {
+    font-size: 3.8em;
+  }
+
 }

@@ -149,7 +149,7 @@ func.getPodcasts = function (cb) {
           podcast.date = moment(date, "YYYYMMDD").format("Do MMMM YYYY");
           podcast.originalCategory = category;
           podcast.category = beautifulNames[category] || category;
-          podcasts.push(podcast);
+          podcasts.push(podcast)
         } 
       });
       cb(podcasts);

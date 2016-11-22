@@ -11,17 +11,17 @@ else
       link(rel="icon", type="image/png", href="/img/logo.png")
       link(rel="stylesheet", href="/css/concat.css")
       link(rel="stylesheet", href="/css/main.css")
-      link(rel="stylesheet", href="/css/colors.css")
+      //link(rel="stylesheet", href="/css/colors.css")
     body
       aside.column.small-12.large-3
         p#intro
           a(href="/")
             img#logo(src="/img/gh_logo_transparent_small.png")
           | est une radio de découvertes musicales basée à Compiègne.
-          | Vous pouvez nous écouter en FM sur le <em>94.9MHz</em> et en streaming sur cette page.
+          | Vous pouvez nous écouter en FM sur le 94.9MHz et en streaming sur cette page.
         .title-bar(data-responsive-toggle="main-menu", data-hide-for="large")
-          button.menu-icon(type=button, data-toggle)
-          .title-bar-title Menu
+          //button.menu-icon(type=button, data-toggle)
+          button.title-bar-title(data-toggle) ↓ navigation ↓
         ul.dropdown.menu.vertical#main-menu
           li
             a.button(href="/") Actualités
@@ -30,11 +30,11 @@ else
           li
             a.button(href="/podcasts") Podcasts
           li
-            a.button(href="/a-propos") A propos
+            a.button(href="/a-propos") À Propos
           section#nowPlaying
-            p Vous écoutez
+            h4 Vous écoutez
             ul#lastFive
-            p Rechercher un titre passé
+            h4 Rechercher un titre passé
             .row
                 select#searchDate.column.large-6
                   - for (var i = 0; i < 15; i++)
@@ -49,7 +49,7 @@ else
                 button#search.button.expanded.secondary Rechercher un titre
                 p#searchResultsIntro.hide A cette heure il passait
                 ul#searchResults
-      section#content.column.small-12.large-9
+      section#content.column.small-12.large-8
         block content
       #player
         img#playPause(src="/img/play.svg")
@@ -57,10 +57,10 @@ else
         span#title Chargement...
         #progressRight
          span#progressText
-          span.badge Live
+          span.badge direct
          button#playerButton(data-toggle="playerMenu") ☰
         .dropdown-pane#playerMenu(data-dropdown)
-          a.button.expanded.hollow#returnToLive Revenir au live
+          a.button.expanded.hollow#returnToLive Revenir au direct
           a.button.expanded.hollow#getStream Source du flux
         progress#progress(style="display:none")
         audio#audio.hide(preload="none")

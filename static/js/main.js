@@ -12,24 +12,34 @@ function setDynamicColors(nb) {
   if (nb > 360)
     nb = 360;
   // TO REMOVE FORCE VALUE
-  nb = 240;
+  //nb = 240;
   var tint = (240 - nb) % 360;
-  var color = "hsl(" + tint + ", 35%, 75%)";
+  var color = "hsl(" + tint + ", 80%, 75%)"; //*8%, 75%
   var colorActive = "hsl(" + tint + ", 35%, 50%)";
-  var colorHover = "hsl(" + tint + ", 35%, 60%)";
-  var rule = "aside a.button, .title-bar, .badge { background-color: " + color + "}";
-  var ruleActive = "aside a.button.active { background-color: " + colorActive + "}";
-  var ruleHover = "aside a.button:hover { background-color: " + colorHover + "}";
+  var colorHover = "hsl(" + tint + ", 7%, 80%)";
+  var colorHover_button = "hsl(" + tint + ", 10%, 90%)";
+  //var rule = "aside .button { background-color: " + color + "}" 
+  //var rule =  "aside a.button, .title-bar, .badge, { border: solid 1px; border-color: " + color + "}";
+  // /!\ ONLY ONE RULE AT A TIME BECAUSE insertRule function is GODDAMN STUPID /!\
+  var rule = "aside a.button {background-color: rgba(205,205,205,0.7);}";
+  var ruleActive = "aside a.button.active { border:solid 1px; border-color: " + color + "}";
+  var ruleHover = "aside a.button:hover { border:solid 1px; border-color: " + colorHover + "; background-color:" + colorHover_button + ";}"; 
+  var ruleHover2 = ".thumbnail:hover { box-shadow: 0 0 6px 1px " + colorHover_button + "}";
   var ruleProgressBar = "#nprogress .bar { background: " + color + " !important}";
-  var sheet = window.document.styleSheets[0];
+  var rule_links = "#content a {background-color : " + colorHover_button + "; color: " + colorHover + "}";
+  var rule_links_pseudo = "#content a:focus, #content a:hover";
+  var sheet = window.document.styleSheets[1];
+  console.log(sheet);
   if (insertAt) // Permit refresh in browser when calling func
-    for(var i = 0; i<4; i++)
+    for(var i = 0; i<6; i++)
       sheet.deleteRule(insertAt);
   insertAt = sheet.cssRules.length;
   sheet.insertRule(rule, insertAt);
   sheet.insertRule(ruleActive, insertAt);
   sheet.insertRule(ruleHover, insertAt);
+  sheet.insertRule(ruleHover2, insertAt);
   sheet.insertRule(ruleProgressBar, insertAt);
+  sheet.insertRule(rule_links, insertAt);
 }
 setDynamicColors();
 
@@ -102,7 +112,7 @@ $("#search").click(function(event) {
     });
     $("#searchResults").html(html);
   }).fail(function(data) {
-    $("#searchResults").text("Erreur.");
+    $("#searchResults").text("Historique introuvable, désolé.");
   });
 });
 
