@@ -9,6 +9,7 @@ var chokidar = require('chokidar');
 var compress = require('compression');
 var schedule = require('node-schedule');
 var bodyParser = require("body-parser");
+var piwik = require("piwik-middleware");
 var WebSocketServer = require("ws").Server
 
 // Express is up
@@ -44,6 +45,14 @@ app.set('views', 'views');
 // Parse JSON in POST requests
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+// Track with piwik
+app.use(piwik({
+    piwikUrl: "stats.grafhit.net",
+    siteId: 2, // See Settings -> Websites in Piwik 
+    trackPageView: true, // See Piwik documentation 
+    linkTracking: true, // enableLinkTracking in Piwik 
+}));
 
 // MySQL init
 var coMysql = mysql.createConnection({
@@ -209,7 +218,7 @@ func.getProg = function (req, res) {
 func.getActus = function(cb) {
   var query = "SELECT title, content FROM posts ";
   query += "WHERE CURDATE()<= ADDDATE(endDate,6) AND status=1 ";
-  query += "ORDER BY ordre, endDate ASC LIMIT 10";
+  query += "ORDER BY ordre, startDate ASC LIMIT 10";
   var actus = [];
   coMysql.query(query, function (error, results, fields) {
     if (error) {
