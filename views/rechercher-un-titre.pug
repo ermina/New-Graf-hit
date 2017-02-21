@@ -1,0 +1,18 @@
+extends _layout.pug
+
+block vars
+  - var pageTitle="Écoute"
+
+block content
+  block contentAjax
+      h1 rechercher un titre
+      p Vous avez entendu un morceau qui vous a plu, et vous souhaitez retrouver son titre ?
+        br
+        br
+        |  Deux solutions : si le titre fait partie de notre programmation générale, 
+        |  vous pouvez utiliser l'outil de recherche dans le menu ci-contre.
+        br
+        |  Si c'est un titre qui a été diffusé dans une émission, 
+        a(href="a-propos") contactez-nous
+        | , 
+        |  et nous transmettrons votre demande à l'animateur concerné.

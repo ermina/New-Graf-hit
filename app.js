@@ -98,6 +98,16 @@ app
     ajax: req.query.ajax 
   });
 })
+.get('/ecoute', function (req, res) {
+  res.render('ecoute', {
+    ajax: req.query.ajax
+  });
+})
+.get('/rechercher-un-titre', function (req, res) {
+  res.render('rechercher-un-titre', {
+    ajax: req.query.ajax
+  });
+})
 .post('/get-programmation', function (req, res) {
     if (req.body.action == "around")
       func.getAroundProg(req, res);
