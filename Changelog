@@ -1,0 +1,55 @@
+Changelog
+
+
+TODO:
+
+- integrate piwik stats tracking
+- add a reception contour on the map
+- searching for a title : return most recent one if results empty
+
+- à ré-écouter :
+	. add "random" or latest podcasts
+	. add download button under play button
+	. adjust play button aspect
+	. play/currently playing button
+	. remove title capitalization
+
+- vous écoutez :
+	. display show info when playing a podcast; also add "télécharger" + "revenir au direct" buttons
+
+- audio player : 
+	. investigate "loop" (cache?) problem
+	. link to download mp3 when file playing
+	. "live" -> "direct"
+	. adjust volume ?
+
+
+- program grid (full callendar):
+	. mobile : display only one day at a time
+	. adjust size and fonts
+	. display only from 6am to 2am
+	. remove scrollbar
+	. highlight current day
+	. change "aujourdhui" "< | >" buttons aspect (smaller/soberer)
+
+- podcast :
+	. alphabetical or retrochronological order
+	. play/currently playing button
+	. "search box"
+
+
+
+2017-01-05
+- general : fix loading bar shadow color
+
+2017-01-02
+- à propos : adjust content
+- general : fix width problem when vertical scrollbar active
+
+2016-12-13
+- general : fix utf8 on prod database (http://www.drzycimski.com/programming/zend-framework/
+converting-a-mysql-database-to-utf-8/)
+
+2016-11-22
+- general : adjust fonts size and color
+- general : adjust visual details (reverse bg, fonts, blocks margins/transparent bg, colors)

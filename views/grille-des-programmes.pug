@@ -19,7 +19,7 @@ block content
             lang: "fr",
             allDaySlot: false,
             eventBackgroundColor: "#FFF",
-            contentHeight: 700,
+            //contentHeight: 700,
             eventTextColor: "#000",
             slotLabelFormat: "HH:mm",
             buttonText: { 
@@ -35,11 +35,21 @@ block content
                 html += "<img class='playProg' src='/img/play.svg'></a>"  
               }
               if(event.link) {
-                html += "<a class='externalLink' href='" + event.link + "'>" 
-                html += "Lien externe</a>"  
+                //html += "<a class='externalLink' href='" + event.link + "'>" 
+                //html += "Lien externe</a>"  
               }
               element.find('.fc-title')
               .append(html); 
+            },
+            eventClick: function(data, event, view) {
+              var content = '<h3>'+event.name+'</h3>' + 
+                  '<p><b>Start:</b> '+event.start+'<br />' + 
+                  (event.end && '<p><b>End:</b> '+event.end+'</p>' || '');
+
+              tooltip.set({
+                  'content.text': event.podcastLink
+              })
+              .reposition(event).show(event);
             },
             viewRender: function( view, element ) {
               var date = view.start.format('YYYY-w');

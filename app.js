@@ -62,7 +62,8 @@ app
 .get('/', function (req, res) {
   func.getHighlighted(function(highlighted) {
     func.getActus(function(actus) {
-      res.render('index', { 
+    //res.setEncoding('utf8');  
+    res.render('index', { 
         ajax: req.query.ajax,
         actus : actus,
         highlighted: highlighted

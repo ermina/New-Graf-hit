@@ -15,6 +15,9 @@
 h1, h2, h4, h5 {
   font-family: Titre;
 }
+h1 {
+
+}
 
 h4 {
   font-size: 1.5rem;
@@ -29,6 +32,10 @@ body {
   background: url("/img/bg_rev.png") no-repeat, url("/img/bg2.png") repeat;
   font-family: Contenu;
   font-size: 20px;
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 a {
@@ -47,18 +54,22 @@ a {
 #intro {
   background: rgba(250,250,250,0.7);
   padding-top: 1rem;
+  font-size: 1.2rem;
 }
 #intro a:focus, #intro a:hover {
   background-color: rgba(255,255,255,0);
 }
-
+#nprogress .bar {
+background:#F00;
+background-color:#F00;
+}
 section#content {
   min-height: 100%; 
   padding: 1em 2em 4em 2em;
 }
 
 section#content h1, h2 {
-  color: #777;
+  color: #ccc;
 }
 
 section#content h1 {
@@ -98,6 +109,10 @@ section#content .podcast h5 {
 
 aside p, aside #nowPlaying {
   xtext-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(255, 255, 255, .5) -1px 1px, rgba(255, 255, 255, .5) -1px -1px, rgba(255, 255, 255, .5) 1px -1px;
+}
+
+aside {
+  border-right: 2em;
 }
 
 aside #nowPlaying {
@@ -304,17 +319,35 @@ progress::-webkit-progress-value {
   margin: 0;
 }
 
-.fc-event {
-  border: 2px solid #777;
-  border-radius: 0;
+
+.fc-time {
+  font-size: 0.6rem;
 }
+.fc-day-header {
+  font-size: 0.9rem;
+  text-align: left !important;
+  border-top: none !important;
+}
+thead {
+  border-top: 0px !important;
+}
+
+.fc-event {
+  border: 1px dash #777;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
 
 .fc-view {
   min-width: 700px
 }
 
 .fc-title {
+  font-size: 0.7rem;
   text-align: center;
+  top: 50%;
+  
 }
 
 .playProg {
