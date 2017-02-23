@@ -7,19 +7,20 @@ block content
   block contentAjax
     h1 Nos podcasts
     p.lead Voici la liste des émissions disponibles au téléchargement :
-    - // Magic to extract unique categories
-    - var categories = Array.from(new Set(podcasts.map(item => item.category)))
-    each category in categories
-      h2= category
-      each podcast in podcasts
-        if podcast.category == category
-          .media-object.podcast
-            .media-object-section
-              .thumbnail(data-file=podcast.file, data-title=podcast.category)
-                img(src="/img/logo.png")
-            .media-object-section
-              h5= podcast.category
-              p Emission du #{podcast.date} 
-                a(href=podcast.file) 
-                  i.fa.fa-download
+    .podcast-list
+      - // Magic to extract unique categories
+      - var categories = Array.from(new Set(podcasts.map(item => item.category)))
+      each category in categories
+        h2= category
+        each podcast in podcasts
+          if podcast.category == category
+            .media-object.podcast
+              .media-object-section
+                .thumbnail(data-file=podcast.file, data-title=podcast.category)
+                  img(src="/img/logo.png")
+              .media-object-section
+                h5= podcast.category
+                p Emission du #{podcast.date} 
+                  a(href=podcast.file) 
+                    i.fa.fa-download
 

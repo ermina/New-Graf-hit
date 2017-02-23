@@ -214,6 +214,9 @@ aside .title-bar {
   background-color: rgba(255,255,255,0) !important;
 }
 
+.podcast-list {
+  background-color: rgba(255,255,255,0.7);
+}
 
 option, select {
   text-align: center;
