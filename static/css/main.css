@@ -80,6 +80,12 @@ section#content .podcast h5 {
   text-transform: capitalize;
 }
 
+.podcast a {
+  font-size: 0.8em;
+  border:none;
+  background-color: rgba(255,255,255,0);
+}
+
 .media-object {
   border-bottom: 1px solid rgba(10, 10, 10, 0.25);
   margin-top: 2rem;
@@ -200,6 +206,12 @@ aside .title-bar {
 
 #intro a {
   border: none;
+}
+
+.podcast a {
+  font-size: 0.8em;
+  border:none;
+  background-color: rgba(255,255,255,0) !important;
 }
 
 

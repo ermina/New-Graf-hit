@@ -19,4 +19,7 @@ block content
                 img(src="/img/logo.png")
             .media-object-section
               h5= podcast.category
-              p Emission du #{podcast.date}
+              p Emission du #{podcast.date} 
+                a(href=podcast.file) 
+                  i.fa.fa-download
+
