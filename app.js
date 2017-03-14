@@ -172,6 +172,7 @@ func.getPodcasts = function (cb) {
           podcasts.push(podcast)
         } 
       });
+      
       cb(podcasts);
     });
   });
@@ -227,7 +228,7 @@ func.getProg = function (req, res) {
 }
 func.getActus = function(cb) {
   var query = "SELECT title, content FROM posts ";
-  query += "WHERE CURDATE()<= ADDDATE(endDate,6) AND status=1 ";
+  query += "WHERE CURDATE()<= ADDDATE(endDate,0) AND status=1 ";
   query += "ORDER BY ordre, startDate ASC LIMIT 10";
   var actus = [];
   coMysql.query(query, function (error, results, fields) {
@@ -246,7 +247,7 @@ func.getActus = function(cb) {
 }
 func.getHighlighted = function(cb) {
   var query = "SELECT title, description, fileUrl FROM modules ";
-  query += "WHERE CURDATE()<= ADDDATE(endDate,6) AND status=1 ";
+  query += "WHERE CURDATE()<= ADDDATE(endDate,0) AND status=1 ";
   query += "ORDER BY startDate ASC LIMIT 10";
   var highlighted = [];
   coMysql.query(query, function (error, results, fields) {
