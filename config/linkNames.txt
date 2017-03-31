@@ -1,8 +1,9 @@
 adLibitum:Ad Libitum
 apocalypse:Apocalypse
-bde:Bonheur,Douceur,Evénement
+bde:Bonheur, Douceur, Evénement
 biotine:Biotine
 bienvenueChezToi:Bienvenue chez toi
+boogieStation:Boogie Station
 canYouDigIt:Can you dig it?
 comptonClassic:Compton Classic
 cultureProhibee:Culture Prohibée
