@@ -16,6 +16,7 @@ foxabouge:Foxabouge
 generationGeek:Génération Geek
 GrafhitFaitSonCinema:Grafhit fait son cinema
 goodMorningCompiegne:Good Morning Compiègne
+grooveExploration:Groove Exploration
 groovolution:Groovolution
 guestAttitude:Guest Attitude
 hardcoreTilDeath:Hardcore 'til Death
