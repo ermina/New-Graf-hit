@@ -2,12 +2,14 @@ adLibitum:Ad Libitum
 bde:Bonheur, Douceur, Evénement
 biotine:Biotine
 boogieStation:Boogie Station
+leCafeDesLumieres:Le Café des Lumières
 canYouDigIt:Can you dig it?
 cultureProhibee:Culture Prohibée
 desJeunesApres:Des Jeunes Après
-disquenfrance:Disquenfrance
+laLigneClaire:La ligne claire
 echosInnovation:Les échos de l'innovation
 etToiTEcoutesQuoi:Et toi, t'�coutes quoi?
+geekHit:Geek Hit
 grooveExploration:Groove Exploration
 guestAttitude:Guest Attitude
 hardcoreTilDeath:Hardcore 'til Death
@@ -16,12 +18,15 @@ journalDuSport: Journal Du Sport
 jungleCall:Jungle Call
 laBoiteAMashups:La Boite À Mashups
 leCriDuYeti:Le Cri du Yéti
-lHeureAuJardin:L'heure au jardin
 leLabo:Le Labo
 matinale:La matinale
 mercredi:Mercredi!
+nousVieillironsSurLeDanceFloor:Nous Vieillirons Sur Le Dance-Floor
 pendezLeDJ:Pendez le DJ!
 polemixEtLaVoixOff:Polemix Et La Voix Off
+soulPower:Soul Power
+reggaeFever:Reggae Fever
 retourAuxPyramides:Retour Aux Pyramides
 vibracaoes:Vibraçãoes
 vinylIsAlive:Vinyl Is Alive
+laVoixEstLibre:La Voix Est Libre

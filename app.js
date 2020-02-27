@@ -108,6 +108,26 @@ app
     ajax: req.query.ajax
   });
 })
+.get('/sons/:moduleId', function (req, res) {
+  if (req.params.moduleId == "")
+    res.render(404);
+  else if (!isNaN(req.params.moduleId))
+//    func.getModules(req, res);
+    func.getModules(req, function(modules) {
+      res.render('replay', {
+        ajax: req.query.ajax,
+        modules: modules
+      });
+    });
+  else if (isNaN(req.params.moduleId))
+    res.render(404); 
+  //func.getModules(function(modules) {
+  //  res.render('replay', {
+  //    ajax: req.query.ajax,
+  //    modules : modules
+  //  });
+  //}); 
+})
 .post('/get-programmation', function (req, res) {
     if (req.body.action == "around")
       func.getAroundProg(req, res);
@@ -243,6 +263,29 @@ func.getActus = function(cb) {
       actus.push(actu);   
     }
     cb(actus);
+  });
+}
+func.getModules = function(req, cb) {
+  var moduleId = req.params.moduleId;
+  var query = "SELECT id, title, description, fileUrl, startDate FROM modules ";
+  query += "WHERE id="+ moduleId +" AND status=1 ";
+  var modules = [];
+  coMysql.query(query, function (error, results, fields) {
+    if (error) {
+      cb("");
+      return;
+    }
+    for (var i in results){
+      var module = {};
+      module.title = results[i].title;
+      module.description = marked(results[i].description);
+      module.fileUrl = results[i].fileUrl;
+      module.startDate = moment(results[i].startDate,"YYYY-MM-DD").format("DD MMMM YYYY");
+      //module.startDate = results[i].startDate;
+      modules.push(module);   
+    }
+//    console.log("lolilol",modules);
+    cb(modules);
   });
 }
 func.getHighlighted = function(cb) {
